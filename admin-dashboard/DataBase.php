@@ -3,6 +3,7 @@
 namespace DataBase;
 
 use PDO;
+use PDOException;
 
 class CreateDB
 {
@@ -15,7 +16,7 @@ class CreateDB
     private $dbHost = "localhost";
     private $dbName = "blog";
     private $dbUsername = "root";
-    private $dbPassword = "";
+    private $dbPassword = "555";
 
 
     function __construct()
