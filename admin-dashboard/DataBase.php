@@ -18,11 +18,11 @@ class DataBase
     function __construct()
     {
         try{
-            $this->connection = new PDO("mysql:host=".$this->dbHost.";dbname=".$this->dbName,$this->dbUsername,
+            $this->connection = new PDO("mysql:host=" . $this->dbHost .";dbname=" . $this->dbName,$this->dbUsername,
             $this->dbPassword,$this->option);
         }
         catch (PDOException $e){
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            echo "<div> style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
         }
 
     }
@@ -39,6 +39,20 @@ class DataBase
                 $result=$stmt;
                 return $result;
             }
+        }
+        catch (PDOException $e){
+            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            return false;
+        }
+    }
+
+
+    public function insert($tableName,$fields,$values)
+    {
+        try{
+            $stmt= $this->connection->prepare("INSERT INTO ".$tableName."(".implode(', ',$fields)." , created_at) VALUES ( :" . implode(', :',$fields) . " , now() );");
+            $stmt->execute(array_combine($fields,$values));
+            return true;
         }
         catch (PDOException $e){
             echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
