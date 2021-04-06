@@ -82,6 +82,19 @@ class CreateDB extends DataBase
         ",
     );
 
+    private $tableInitializes = array(
+        ['table'=>'users', 'fields'=>['username', 'email', 'password', 'permission'], 'values'=>['kam', 'kamran@gmail.com', '12345678', 'admin']],
+    );
+
+    public function run()
+    {
+        foreach ($this->createTableQueries as $createTableQuery){
+            $this->createTable($createTableQuery);
+        }
+        foreach ($this->tableInitializes as $tableInitialize){
+            $this->insert($tableInitialize['table'], $tableInitialize['fields'], $tableInitialize['values']);
+        }
+    }
 
 
 
