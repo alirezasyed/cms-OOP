@@ -14,9 +14,9 @@ class CreateDB
 
 
     private $dbHost = "localhost";
-    private $dbName = "blog";
+    private $dbName = "php-cms";
     private $dbUsername = "root";
-    private $dbPassword = "555";
+    private $dbPassword = "";
 
 
     function __construct()
