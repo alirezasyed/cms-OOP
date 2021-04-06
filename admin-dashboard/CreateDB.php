@@ -43,6 +43,43 @@ class CreateDB extends DataBase
           FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;",
 
+        "CREATE TABLE `comments` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `user_id` int(11) NOT NULL,
+          `comment` text NOT NULL,
+          `article_id` int(11)  NOT NULL,
+          `status` enum('unseen','seen','approved') NOT NULL DEFAULT 'unseen',
+          `created_at` datetime NOT NULL,
+          `updated_at` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`),
+          FOREIGN KEY (`article_id`) REFERENCES `articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+          FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;",
+
+        "CREATE TABLE `websetting` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `title` text DEFAULT NULL,
+          `description` text DEFAULT NULL,
+          `keywords` text DEFAULT NULL,
+          `logo` text DEFAULT NULL,
+          `icon` text DEFAULT NULL,
+          `created_at` datetime NOT NULL,
+          `updated_at` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+        ",
+
+        "CREATE TABLE `menus` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `name` varchar(100) NOT NULL,
+          `url` varchar(300) NOT NULL,
+          `parent_id` int(11) DEFAULT NULL,
+          `created_at` datetime NOT NULL,
+          `updated_at` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`),
+          FOREIGN KEY (`parent_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+        ",
     );
 
 
