@@ -27,35 +27,51 @@ class DataBase
 
     }
 
+
     public function select($sql, $values = NULL)
     {
         try{
+
             if ($values==null){
+
                 return $this->connection->query($sql);
             }
+
             else{
+
                 $stmt= $this->connection->prepare($sql);
+
                 $stmt->execute($values);
+
                 $result=$stmt;
+
                 return $result;
             }
         }
         catch (PDOException $e){
+
             echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            
             return false;
         }
     }
 
 
+
     public function insert($tableName,$fields,$values)
     {
         try{
+
             $stmt= $this->connection->prepare("INSERT INTO " . $tableName . "(".implode(', ',$fields)." , created_at) VALUES ( :" . implode(', :',$fields) . " , now() );");
+
             $stmt->execute(array_combine($fields,$values));
+
             return true;
         }
         catch (PDOException $e){
+
             echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            
             return false;
         }
     }
@@ -95,6 +111,35 @@ class DataBase
             return true;
 
         } catch (PDOException $e) {
+
+            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
+
+            return false;
+        }
+    }
+
+
+
+
+    public function delete($tableName, $id)
+    {
+
+        $sql="DELETE FROM " . $tableName . " WHERE `id` = ? ;";
+
+        try{
+
+            $stmt= $this->connection->prepare($sql);
+
+            $affectedrows = $stmt->execute([$id]);
+
+            if (isset($affectedrows)) {
+
+                echo "Les enregistrements sont supprimés";
+            }
+            
+            return true;
+        }
+        catch (PDOException $e) {
 
             echo "<div> style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
 
