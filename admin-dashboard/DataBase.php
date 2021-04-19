@@ -22,12 +22,12 @@ class DataBase
             $this->dbPassword,$this->option);
         }
         catch (PDOException $e){
-            echo "<div> style='color:red;'> There is some problem in connection :</div>". $e->getMessage();
+            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
         }
 
     }
 
-    public function select($sql, $values=NULL)
+    public function select($sql, $values = NULL)
     {
         try{
             if ($values==null){
@@ -50,7 +50,7 @@ class DataBase
     public function insert($tableName,$fields,$values)
     {
         try{
-            $stmt= $this->connection->prepare("INSERT INTO ".$tableName."(".implode(', ',$fields)." , created_at) VALUES ( :" . implode(', :',$fields) . " , now() );");
+            $stmt= $this->connection->prepare("INSERT INTO " . $tableName . "(".implode(', ',$fields)." , created_at) VALUES ( :" . implode(', :',$fields) . " , now() );");
             $stmt->execute(array_combine($fields,$values));
             return true;
         }
@@ -59,6 +59,50 @@ class DataBase
             return false;
         }
     }
+
+
+    public function update($tableName, $id, $fields, $values)
+    {
+        $sql = "UPDATE `" . $tableName . "` SET";
+
+        foreach (array_combine($fields, $values) as $field => $value) {
+
+            if ($values)
+            
+                $sql .= " `" . $field . "`= ? ,";
+
+            else
+            
+                $sql .= " `" . $field . "` = NULL,";
+
+        }
+
+        $sql .= " `updated_at` = now()";
+
+        $sql .= " WHERE `id` = ?";
+
+        try {
+
+            $stmt = $this->connection->prepare($sql);
+
+            $affectedrows = $stm->execute(array_merge(array_filter(array_values($values)), [$id]));
+
+            if (isset($affectedrows)) {
+
+                echo "Les enregistrements sont mis à jour";
+            }
+
+            return true;
+
+        } catch (PDOException $e) {
+
+            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
+
+            return false;
+        }
+    }
+
+
 
     public function createTable($sql)
     {
