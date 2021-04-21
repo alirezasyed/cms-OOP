@@ -41,9 +41,9 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
             <tr>
 
-                <td><?php echo $category["id"] ?></td>
+                <td><?php echo $category["id"]; ?></td>
 
-                <td><?php echo $category["name"] ?></td>
+                <td><?php echo $category["name"]; ?></td>
 
                 <td>
 
