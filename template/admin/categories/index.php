@@ -37,7 +37,10 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
             <tbody>
 
-<?php foreach ($categories as $category) { ?>
+<?php if (is_array($categories) || is_object($categories))
+{
+
+    foreach ($categories as $category) { ?>
 
             <tr>
 
@@ -60,7 +63,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
             </tr>
 
-<?php } ?>
+<?php } } ?>
 
             </tbody>
 

@@ -12,6 +12,7 @@ class Categorie extends Admin
     {
         $db = new DataBase();
         $category = $db->select("SELECT * FROM `categories` ORDER BY `id` DESC; ");
+        require_once (realpath(dirname(__FILE__). "/../template/admin/categories/index.php"));
         
     }
 
@@ -19,12 +20,13 @@ class Categorie extends Admin
     {
         $db = new DataBase();
         $category = $db->select("SELECT * FROM `categories` WHERE (`id` = ?); ", ([$id])->fetch());
+        require_once (realpath(dirname(__FILE__). "/../template/admin/categories/show.php"));
 
     }
 
     public function create()
     {
-
+        require_once (realpath(dirname(__FILE__). "/../template/admin/categories/create.php"));
     }
 
     public function store($request, $id)
@@ -38,6 +40,7 @@ class Categorie extends Admin
     {
         $db= new DataBase();
         $category = $db->select("SELECT * FROM `categories` WHERE `id` = ? ;", [$id])->fetch();
+        require_once (realpath(dirname(__FILE__). "/../template/admin/categories/edit.php"));
 
     }
 
