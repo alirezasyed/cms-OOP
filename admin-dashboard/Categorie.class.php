@@ -33,6 +33,7 @@ class Categorie extends Admin
     {
         $db= new DataBase();
         $db->insert('categories',array_keys($request) , $request);
+        $this->redirect('category');
 
     }
 
@@ -48,6 +49,7 @@ class Categorie extends Admin
     {
         $db= new DataBase();
         $db->update('categories',$id,array_keys($request),$request);
+        $this->redirect('category');
 
     }
 
@@ -55,6 +57,7 @@ class Categorie extends Admin
     {
         $db= new DataBase();
         $db->delete('categories',$id);
+        $this->redirectBack();
 
     }
 
