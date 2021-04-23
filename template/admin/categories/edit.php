@@ -11,7 +11,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
         <section class="col-12">
             
-            <form method="post" action="http://localhost/admin-panel/category/update/<?php echo $id; ?>">
+            <form method="post" action="http://localhost/cms-php/category/update/<?php echo $id; ?>">
             
                 <div class="form-group">
 

@@ -8,7 +8,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
         <div class="btn-toolbar mb-2 mb-md-0">
 
-            <a role="button" href="#" class="btn btn-sm btn-success">create</a>
+            <a role="button" href="http://localhost/cms-php/category/create" class="btn btn-sm btn-success">create</a>
 
         </div>
 

@@ -19,7 +19,7 @@ class Category extends Admin
     public function show($id)
     {
         $db = new DataBase();
-        $category = $db->select("SELECT * FROM `categories` WHERE (`id` = ?); ", ([$id])->fetch());
+        $category = $db->select("SELECT * FROM `categories` WHERE `id` = ?; ", [$id])->fetch();
         require_once (realpath(dirname(__FILE__). "/../template/admin/categories/show.php"));
 
     }
