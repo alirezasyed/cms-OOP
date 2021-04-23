@@ -13,7 +13,7 @@ class DataBase
     private $dbHost= "localhost";
     private $dbName= "php-cms";
     private $dbUsername="root";
-    private $dbPassword = "";
+    private $dbPassword = "gF@bk5(-Pd!64rodQ";
 
     function __construct()
     {
@@ -32,7 +32,7 @@ class DataBase
     {
         try{
 
-            if ($values==null){
+            if ($values == null){
 
                 return $this->connection->query($sql);
             }

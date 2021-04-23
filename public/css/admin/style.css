@@ -53,21 +53,30 @@
 
 .bg-juicy-orange {
     background: #FF8008;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);
     background: linear-gradient(to right, #FFC837, #FF8008);
 }
 
 .bg-dracula {
+    /* fallback for old browsers */
     background: #f857a6;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
     background: linear-gradient(to right, #ff5858, #f857a6);
 }
 
 .bg-neon-life {
     background: #00c6ff;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
     background: linear-gradient(to right, #0072ff, #00c6ff);
 }
 
 .bg-auth-form {
     background: #FF512F;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, #DD2476, #FF512F);
     background: linear-gradient(to left, #DD2476, #FF512F);
     height: 100vh;
 }
