@@ -133,6 +133,18 @@ uri('category/delete/{id}','Category','delete');
 
 
 
+//articles
+uri('article','Article','index');
+uri('article/show/{id}','Article','show');
+uri('article/create','Article','create');
+uri('article/store','Article','store','POST');
+uri('article/edit/{id}','Article','edit');
+uri('article/update/{id}','Article','update','POST');
+uri('article/delete/{id}','Article','delete');
+
+
+
+
 
 
 
