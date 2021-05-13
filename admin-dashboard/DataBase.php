@@ -13,7 +13,7 @@ class DataBase
     private $dbHost= "localhost";
     private $dbName= "php-cms";
     private $dbUsername="root";
-    private $dbPassword = "gF@bk5(-Pd!64rodQ";
+    private $dbPassword = "";
 
     function __construct()
     {
@@ -101,7 +101,7 @@ class DataBase
 
             $stmt = $this->connection->prepare($sql);
 
-            $affectedrows = $stm->execute(array_merge(array_filter(array_values($values)), [$id]));
+            $affectedrows = $stmt->execute(array_merge(array_filter(array_values($values)), [$id]));
 
             if (isset($affectedrows)) {
 
