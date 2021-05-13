@@ -75,6 +75,11 @@ class Article {
 
     public function edit($id)
     {
+        $db= new DataBase();
+        $article = $db->select("SELECT * FROM `articles` WHERE (`id` = ?); ",[$id])->fetch();
+        $categories = $db->select('SELECT * FROM `categories` ORDER BY `id` DESC ;');
+        require_once (realpath(dirname(__FILE__). "/../template/admin/articles/edit.php"));
+
 
     }
 
