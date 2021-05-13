@@ -86,7 +86,7 @@ class Article {
 
         $db= new DataBase();
 
-        if ($request['cat_id'] != null){
+        if ($request['cat_id'] != null) {
 
             $request['image'] = $this->saveImage($request['image'], 'article-image');
 
@@ -116,6 +116,13 @@ class Article {
 
     public function delete($id)
     {
+
+        $db = new DataBase();
+        $article = $db->select("SELECT * FROM `articles` WHERE (`id` = ?); ",[$id])->fetch();
+        $this->removeImage($article['image']);
+
+        $db->delete('articles',$id);
+        $this->redirectBack();
         
     }
 
