@@ -1,9 +1,11 @@
 <?php
 require_once ("admin-dashboard/Category.class.php");
+require_once ("admin-dashboard/Article.class.php");
 
 require_once ("admin-dashboard/CreateDB.php");
 
 use AdminDashboard\Category;
+use AdminDashboard\Article;
 use DataBase\CreateDB;
 
 
