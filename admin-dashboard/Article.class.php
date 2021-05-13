@@ -79,12 +79,38 @@ class Article {
         $article = $db->select("SELECT * FROM `articles` WHERE (`id` = ?); ",[$id])->fetch();
         $categories = $db->select('SELECT * FROM `categories` ORDER BY `id` DESC ;');
         require_once (realpath(dirname(__FILE__). "/../template/admin/articles/edit.php"));
-
-
     }
 
     public function update($request, $id)
     {
+
+        $db= new DataBase();
+
+        if ($request['cat_id'] != null){
+
+            $request['image'] = $this->saveImage($request['image'], 'article-image');
+
+            if ($request['image']){
+
+                $request = array_merge($request,array('user_id'=>1));
+                $db->insert('articles',array_keys($request) , $request);
+                $this->redirect('article');
+            }
+
+            else {
+
+                unset($request['image']);
+            }
+            
+                $request= array_merge($request,array('user_id'=>1));
+                $db->update('articles',$id , array_keys($request),$request);
+                $this->redirect('article');
+        }
+
+        else {
+
+            $this->redirectBack();
+        }
 
     }
 
