@@ -148,6 +148,18 @@ uri('article/delete/{id}','Article','delete');
 
 
 
+//menu
+uri('menu','Menu','index');
+uri('menu/show/{id}','Menu','show');
+uri('menu/create','Menu','create');
+uri('menu/store','Menu','store','POST');
+uri('menu/edit/{id}','Menu','edit');
+uri('menu/update/{id}','Menu','update','POST');
+uri('menu/delete/{id}','Menu','delete');
+
+
+
+
 
 
 
