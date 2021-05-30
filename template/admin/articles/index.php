@@ -31,7 +31,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
 
             <tbody>
 
-                <?php foreach ($articles as $article) ?>
+                <?php foreach ($articles as $article) { ?>
                     <tr>
                         <td><a class="text-primary" href="http://localhost/cms-php/article/show/<?php echo $article['id']; ?>">
                         <?php echo $article['id'] ?></a></td>
@@ -50,6 +50,8 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
                         </td>
                             
                     </tr>
+
+                <?php } ?>  
 
             </tbody>
 
