@@ -1,10 +1,12 @@
 <?php
 require_once ("admin-dashboard/Category.class.php");
 require_once ("admin-dashboard/Article.class.php");
+require_once ("admin-dashboard/WebSetting.class.php");
 require_once ("admin-dashboard/CreateDB.php");
 require_once ("admin-dashboard/Menu.class.php");
 
 use AdminDashboard\Category;
+use AdminDashboard\WebSetting;
 use AdminDashboard\Article;
 use AdminDashboard\Menu;
 use DataBase\CreateDB;
@@ -158,6 +160,10 @@ uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
 
 
+//websetting
+uri('web-setting','WebSetting','index');
+uri('web-setting/set','WebSetting','set');
+uri('web-setting/store','WebSetting','store','POST');
 
 
 
