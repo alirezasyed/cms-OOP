@@ -11,7 +11,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
         <section class="col-12">
 
             <h1 class="h4 border-bottom">name <?php echo $menu['name'] ?></h1>
-            <p class="h4 border-bottom">url : <?php echo $menu['url'] ?></p>
+            <p class="h4 border-bottom">url : #<?php echo $menu['url'] ?></p>
             <p class="h4 border-bottom">parent ID : <?php echo $menu['parent_id'] ?></p>
             
         </section>
