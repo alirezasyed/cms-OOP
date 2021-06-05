@@ -10,5 +10,11 @@ require_once ("Admin.class.php");
         $setting= $db->select("SELECT * FROM `websetting`;")->fetch();
         require_once (realpath(dirname(__FILE__). "/../template/admin/web-setting/index.php"));
     }
+    public function set()
+    {
+        $db= new DataBase();
+        $setting= $db->select("SELECT * FROM `websetting`;")->fetch();
+        require_once (realpath(dirname(__FILE__). "/../template/admin/web-setting/set.php"));
+    }
     
  }
