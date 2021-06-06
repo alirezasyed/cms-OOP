@@ -9,7 +9,7 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
     <section class="row my-3">
         <section class="col-12">
 
-            <form method="post" action="http://localhost/admin-panel/web-setting/store" enctype="multipart/form-data">
+            <form method="post" action="http://localhost/cms-php/web-setting/store" enctype="multipart/form-data">
 
                 <div class="form-group">
 
@@ -21,44 +21,44 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
                 <div class="form-group">
 
                     <label for="description">Description</label>
-                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter title ..." value="<?php if($setting !=null) echo $setting['description']; ?>" autofocus>
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter description ..." value="<?php if($setting !=null) echo $setting['description']; ?>" autofocus>
 
                 </div>
 
                 <div class="form-group">
 
                     <label for="keywords">Keywords</label>
-                    <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Enter title ..." value="<?php if($setting !=null) echo $setting['keywords']; ?>" autofocus>
+                    <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Enter keywords ..." value="<?php if($setting !=null) echo $setting['keywords']; ?>" autofocus>
 
                 </div>
 
 
             <div class="form-group">
 
+                    <label for="logo">Logo</label>
+                    <input type="file" id="logo" name="logo" class="form-control-file" autofocus>
+
             <?php if($setting !=null){ ?>
 
-                        <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin-panel/'.$setting['logo']; ?>" alt="" >
+                        <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/cms-php/'.$setting['logo']; ?>" alt="" >
                     <hr/>
 
                     <?php } ?>
-
-                    <label for="logo">Logo</label>
-                    <input type="file" id="logo" name="logo" class="form-control-file" autofocus>
 
                 </div>
 
                 <div class="form-group">
 
+                    <label for="icon">Icon</label>
+                    <input type="file" id="icon" name="icon" class="form-control-file" autofocus>
+
                 <?php if($setting !=null){ ?>
                 
-                        <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin-panel/'.$setting['icon']; ?>" alt="" >
+                        <img style="width: 100px;" src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/cms-php/'.$setting['icon']; ?>" alt="" >
                     <hr/>
 
                     <?php } ?>
 
-                    <label for="icon">Icon</label>
-                    <input type="file" id="icon" name="icon" class="form-control-file" autofocus>
-                    
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-sm">set</button>

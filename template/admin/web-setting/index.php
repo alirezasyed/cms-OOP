@@ -52,7 +52,7 @@ require_once realpath(dirname(__FILE__) . "/../layouts/head-tag.php");
 
                     <tr>
                         <td>Icon</td>
-                        <td><img src="<?php echo $setting['icon']; ?>" alt="" width="100px" height="100px"</td>
+                        <td><img src="<?php echo $setting['icon']; ?>" alt="" width="100px" height="100px"></td>
                     </tr>
 
                 </tbody>
