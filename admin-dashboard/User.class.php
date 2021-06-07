@@ -27,7 +27,24 @@ require_once ("Admin.class.php");
 
     }
 
-  
+    public function edit($id){
+        $db= new DataBase();
+        $user = $db->select("SELECT * FROM `users` WHERE `id` = ? ;", [$id])->fetch();
+        require_once (realpath(dirname(__FILE__). "/../template/admin/users/edit.php"));
+
+    }
+
+    public function update($request,$id){
+        $db= new DataBase();
+        $db->update('users',$id,array_keys($request),$request);
+        $this->redirect('user');
+    }
+
+    public function delete($id){
+        $db= new DataBase();
+        $db->delete('users',$id);
+        $this->redirectBack();
+    }
 
 
  }
