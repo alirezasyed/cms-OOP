@@ -148,8 +148,6 @@ uri('article/update/{id}','Article','update','POST');
 uri('article/delete/{id}','Article','delete');
 
 
-
-
 //menu
 uri('menu','Menu','index');
 uri('menu/show/{id}','Menu','show');
@@ -159,6 +157,12 @@ uri('menu/edit/{id}','Menu','edit');
 uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
 
+//user
+uri('user','User','index');
+uri('user/permission/{id}','User','permission');
+uri('user/edit/{id}','User','edit');
+uri('user/update/{id}','User','update','POST');
+uri('user/delete/{id}','User','delete');
 
 //websetting
 uri('web-setting','WebSetting','index');
