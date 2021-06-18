@@ -7,6 +7,13 @@ use DataBase\DataBase;
 class Auth
 {
 
+    function __construct()
+    {
+        if(session_status() == PHP_SESSION_NONE){
+            session_start();
+        }
+    }
+
     public function login()
     {
         require_once realpath(dirname(__FILE__) . "/../template/auth/login.php");
@@ -18,8 +25,7 @@ class Auth
 
             $this->redirectBack();
 
-        } 
-        else {
+        } else {
 
             $db = new DataBase();
 
@@ -27,18 +33,17 @@ class Auth
 
             if ($user != null) {
 
-                if(password_verify($request['password'] , $user['password'])) {
+                if (password_verify($request['password'], $user['password'])) {
+
                     $_SESSION['user'] = $user['id'];
-    
+
                     $this->redirect('admin');
-                }
-                else {
-    
+
+                } else {
+
                     $this->redirectBack();
                 }
-            }
-
-            else {
+            } else {
 
                 $this->redirectBack();
             }
@@ -50,7 +55,6 @@ class Auth
         require_once realpath(dirname(__FILE__) . "/../template/auth/register.php");
     }
 
-
     public function registerStore($request)
     {
 
@@ -58,14 +62,11 @@ class Auth
 
             $this->redirectBack();
 
-        } else if (strlen($request['password'] < 8)) 
-        
-        {
+        } else if (strlen($request['password'] < 8)) {
 
             $this->redirectBack();
 
-        } else if (!filter_var($request['email'], FILTER_VALIDATE_EMAIL)) 
-        {
+        } else if (!filter_var($request['email'], FILTER_VALIDATE_EMAIL)) {
 
             $this->redirectBack();
 
@@ -91,7 +92,6 @@ class Auth
         }
     }
 
-
     public function logout()
     {
         if (isset($_SESSION['user'])) {
@@ -102,7 +102,6 @@ class Auth
         $this->redirectBack();
     }
 
-    
     public function checkAdmin()
     {
         if (isset($_SESSION['user'])) {
@@ -124,12 +123,10 @@ class Auth
             }
 
         } else {
-            
+
             $this->redirect('home');
         }
     }
-
-
 
     protected function redirect($url)
     {
@@ -140,5 +137,11 @@ class Auth
     protected function redirectBack()
     {
         header("Location: " . $_SERVER['HTTP_REFERER']);
+    }
+
+    public function hash($string){
+
+        $hashString = password_hash($string,PASSWORD_DEFAULT);
+        return $hashString;
     }
 }
