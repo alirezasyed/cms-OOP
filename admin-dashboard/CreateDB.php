@@ -83,8 +83,11 @@ class CreateDB extends DataBase
     );
 
     private $tableInitializes = array(
-        ['table'=>'users', 'fields'=>['username', 'email', 'password', 'permission'], 'values'=>['kam', 'kamran@gmail.com', '12345678', 'admin']],
+
+        ['table'=>'users', 'fields'=>['username', 'email', 'password', 'permission'], 'values'=>['kam', 'kam@gmail.com', '$2y$10$E.e29JnF3pUzJ.WUYxN66O1wy1mXyi5N/v6CEM0lGL7V.YaLmhNLS', 'admin']],
+
     );
+    
 
     public function run()
     {

@@ -30,16 +30,6 @@
 
             <form method="post" class="" action="http://localhost/cms-php/check-login">
 
-                <?php
-
-                    $httpReferer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-
-                    if($httpReferer == 'http://localhost/cms-php/login') {?>
-
-                    <div> <small class="form-text text-danger"> Le mot de passe est incorrect</small> </div><?php
-
-                }?>
-
                 <div class="form-group">
 
                     <label for="email">Email</label>
@@ -75,7 +65,11 @@
 
 <script type="text/javascript">
 
-<?php if($httpReferer == 'http://localhost/cms-php/login') {?>
+<?php 
+
+    $httpReferer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
+
+    if($httpReferer == 'http://localhost/cms-php/login') {?>
 
     swal({
         title: "Login Error!",
