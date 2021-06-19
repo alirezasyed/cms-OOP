@@ -3,11 +3,13 @@ require_once ("admin-dashboard/Category.class.php");
 require_once ("admin-dashboard/Article.class.php");
 require_once ("admin-dashboard/WebSetting.class.php");
 require_once ("admin-dashboard/User.class.php");
+require_once ("admin-dashboard/Auth.class.php");
 require_once ("admin-dashboard/CreateDB.php");
 require_once ("admin-dashboard/Menu.class.php");
 
 use AdminDashboard\Category;
 use AdminDashboard\User;
+use AdminDashboard\Auth;
 use AdminDashboard\WebSetting;
 use AdminDashboard\Article;
 use AdminDashboard\Menu;
@@ -172,7 +174,12 @@ uri('web-setting/set','WebSetting','set');
 uri('web-setting/store','WebSetting','store','POST');
 
 
-
+//Auth
+uri('login','Auth','login');
+uri('check-login','Auth','checkLogin','POST');
+uri('register','Auth','register');
+uri('register-store','Auth','registerStore','POST');
+uri('logout','Auth','logout');
 
 
 
