@@ -178,7 +178,7 @@ uri('web-setting/store','WebSetting','store','POST');
 uri('login','Auth','login');
 uri('check-login','Auth','checkLogin','POST');
 uri('register','Auth','register');
-uri('register-store','Auth','registerStore','POST');
+uri('register/store','Auth','registerStore','POST');
 uri('logout','Auth','logout');
 
 
