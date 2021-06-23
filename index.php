@@ -6,6 +6,7 @@ require_once ("admin-dashboard/User.class.php");
 require_once ("admin-dashboard/Auth.class.php");
 require_once ("admin-dashboard/CreateDB.php");
 require_once ("admin-dashboard/Menu.class.php");
+require_once ("admin-dashboard/Home.class.php");
 
 use AdminDashboard\Category;
 use AdminDashboard\User;
@@ -14,6 +15,7 @@ use AdminDashboard\WebSetting;
 use AdminDashboard\Article;
 use AdminDashboard\Menu;
 use DataBase\CreateDB;
+use DataBase\Home;
 
 
 function uri($uri,$class,$method,$requestMethod = 'GET'){
@@ -130,7 +132,7 @@ function uri($uri,$class,$method,$requestMethod = 'GET'){
 
 
 
-//category
+// ================= category ==================
 uri('category','Category','index');
 uri('category/show/{id}','Category','show');
 uri('category/create','Category','create');
@@ -141,8 +143,7 @@ uri('category/delete/{id}','Category','delete');
 
 
 
-
-//articles
+// ================= articles ==================
 uri('article','Article','index');
 uri('article/show/{id}','Article','show');
 uri('article/create','Article','create');
@@ -152,7 +153,8 @@ uri('article/update/{id}','Article','update','POST');
 uri('article/delete/{id}','Article','delete');
 
 
-//menu
+
+// ================= menu ==================
 uri('menu','Menu','index');
 uri('menu/show/{id}','Menu','show');
 uri('menu/create','Menu','create');
@@ -161,25 +163,42 @@ uri('menu/edit/{id}','Menu','edit');
 uri('menu/update/{id}','Menu','update','POST');
 uri('menu/delete/{id}','Menu','delete');
 
-//user
+
+
+
+// ================= user ==================
 uri('user','User','index');
 uri('user/permission/{id}','User','permission');
 uri('user/edit/{id}','User','edit');
 uri('user/update/{id}','User','update','POST');
 uri('user/delete/{id}','User','delete');
 
-//websetting
+
+
+
+// ================= websetting ==================
 uri('web-setting','WebSetting','index');
 uri('web-setting/set','WebSetting','set');
 uri('web-setting/store','WebSetting','store','POST');
 
 
-//Auth
+
+
+// ================= Auth ==================
 uri('login','Auth','login');
 uri('check-login','Auth','checkLogin','POST');
 uri('register','Auth','register');
 uri('register/store','Auth','registerStore','POST');
 uri('logout','Auth','logout');
+
+
+
+
+// ================= Home ==================
+uri('home','Home','index');
+uri('show-article/{id}','Home','show');
+uri('show-category/{id}','Home','category');
+uri('comment-store','Home','commentStore','POST');
 
 
 
