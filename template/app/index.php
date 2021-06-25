@@ -21,9 +21,11 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                             </h3>
 
                             <ul class="caption-info-bar">
+
                                 <li class="">by <b class="text-yellow">Jim,</b> feb 19 2019</li>
                                 <li><i class="fas fa-bolt text-yellow"></i> 21</li>
                                 <li><i class="fas fa-comments text-yellow"></i> 19</li>
+                                
                             </ul>
 
                         </div>

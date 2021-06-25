@@ -1,0 +1,85 @@
+/* ===================== styles primaires ===================== */
+* {
+    margin: 0px auto;
+    font-size: 14px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-wrap: break-word;
+    color: #333;
+}
+
+.intro-h-600px{
+    height: 600px;
+    /*height < 768 auto*/
+}
+
+.intro-row{
+    width: 100%;
+}
+
+/*.intro-h-2-3{*/
+    /*height: 300px;*/
+/*}*/
+
+.mb-10x{
+    margin-bottom: 10px;
+}
+
+.content .intro-2-3-col a > {
+
+    background: url(http://localhost/cms-php) no-repeat center; background-size: cover;
+}
+
+.intro-h-100{
+    height: auto;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.h-md-300px{
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+
+/* .intro-2-3-item{
+
+} */
+
+
+.intro-item-caption{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
+.caption-title {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    right: 20px;
+}
+
+
+.caption-info-bar{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 0px;
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+
