@@ -20,9 +20,11 @@
         <nav class="header">
 
             <img class="header-logo" src="" alt="">
+            
             <button class="header-menu-burger" onclick="showMenu()" type="button"><i class="fas fa-bars"></i></button>
 
             <ul class="header-menu" id="menu">
+
                 <li class="header-menu-item"><a class="header-menu-item-link"  href="#">Home</a></li>
                 <li class="header-menu-item"><a class="header-menu-item-link"  href="#">News</a></li>
                 <li class="header-menu-item"><a class="header-menu-item-link"  href="#">Economic</a></li>
