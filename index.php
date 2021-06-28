@@ -21,7 +21,7 @@ use DataBase\Home;
 function uri($uri,$class,$method,$requestMethod = 'GET'){
 
   $values = array();
-  
+
   $subURIs = explode('/', $uri);
 
   $request_uri = array_slice(explode('/', $_SERVER['REQUEST_URI']), 2);
@@ -92,7 +92,7 @@ function uri($uri,$class,$method,$requestMethod = 'GET'){
                 if (isset($_FILES)){
                     
                     $request = array_merge($_POST,$_FILES);
-                    $object->$method($request, $id);
+                    $object->$method($request);
                 }
 
             else
