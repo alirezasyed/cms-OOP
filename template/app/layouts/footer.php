@@ -52,6 +52,32 @@
 
         </div>
 
+        <div class="footer-line"></div>
+
+        <div class="footer-row">
+            <ul class="footer-menu">
+
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Privacy policy</a></li>
+                <li><a href="">Jobs advertising</a></li>
+                <li><a href="">Contact us</a></li>
+
+            </ul>
+
+            <ul class="footer-social-network">
+
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-bitcoin"></i></a></li>
+
+            </ul>
+
+            <div class="clear-fix"></div>
+            
+        </div>
+
     </section><!--fin de la deuxième section de l'application -->
 
     <div class="clear-fix"></div>
