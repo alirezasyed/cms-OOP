@@ -1,4 +1,4 @@
-/* ===================== styles primaires ===================== */
+/* ===================== styles primaires Home ===================== */
 * {
     margin: 0px auto;
     font-size: 14px;
@@ -79,6 +79,117 @@
     list-style: none;
     display: inline-block;
 }
+
+/* ===================== Fin de styles primaires ===================== */
+
+
+
+/* ===================== Header ===================== */
+
+
+.header{
+
+    font-weight: 600;
+    /*height: 80px;*/
+}    
+
+/*.header:after{*/
+    /*content: '';*/
+    /*clear: both;*/
+/*}*/    
+
+.header-logo {
+
+    float: left;
+    height: 24px;
+    margin: 28px 0;
+}    
+
+.header-menu {
+
+    list-style: none;
+    display: inline;
+    float: right;
+}    
+
+.show {
+
+    display: inline-block !important;
+    position: relative;
+}    
+
+.header-menu-item {
+
+    display: inline;
+    position: relative;
+}    
+
+.header-menu-item > span {
+
+    padding: 10px 8px;
+    position: absolute;
+    top: 100%;
+    right: -30%;
+    min-width: 150px;
+    min-height: 50px;
+    display: none;
+    z-index: 100;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 1px #DEDEDE solid;
+}    
+
+.header-menu-item:hover > span {
+
+    display: inline-block;
+}    
+
+.header-menu-item > span > a {
+
+    display: block;
+    font-size: 14px;
+    padding: 6px;
+}    
+
+.header-menu-item-link {
+
+    line-height: 80px;
+    padding: 0px 15px;
+    font-weight: 700;
+    color: #333;
+}    
+
+/* .header-menu-item-link:hover {
+
+
+} */    
+
+.header-menu-burger {
+
+    float: right;
+    display: none;
+    background-color: inherit;
+    color: #888888;
+    border: none;
+    line-height: 80px;
+    font-weight: 100 !important;
+    font-size: 30px;
+}    
+
+.header-menu-burger:hover,
+.header-menu-burger:focus {
+
+    outline: none;
+    color: #F9B500 !important;
+}    
+
+/* ===================== Fin de Header ===================== */
+
+
+
+
+
+
 
 
 
