@@ -35,6 +35,66 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
                 </div>
 
 
+                <div class="intro-1-3-col intro-h-100">
+
+                    <div class="intro-1-3-item intro-h-50 position-relative h-md-300px">
+
+                        <a href="http://localhost/cms-php/show-article/2">
+
+                            <div class="img-bg intro-h-100"></div>
+
+                            <div class="intro-item-caption">
+
+                                <h3 class="caption-title">
+                                    <b>Lorem ipsum dolor sit amet, consectetur.</b>
+                                </h3>
+
+                                <ul class="caption-info-bar">
+
+                                    <li>feb 19 2021</li>
+                                    <li><i class="fas fa-bolt text-yellow"></i> 81</li>
+                                    <li><i class="fas fa-comments text-yellow"></i> 32</li>
+
+                                </ul>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="intro-1-3-item intro-h-50 position-relative h-md-300px">
+
+                        <a href="http://localhost/cms-php/show-article/3">
+
+                            <div class="img-bg intro-h-100"></div>
+
+                            <div class="intro-item-caption">
+
+                                <h3 class="caption-title">
+                                    <b>Lorem ipsum dolor.</b>
+                                </h3>
+
+                                <ul class="caption-info-bar">
+
+                                    <li>feb 19 2021</li>
+                                    <li><i class="fas fa-bolt text-yellow"></i> 7</li>
+                                    <li><i class="fas fa-comments text-yellow"></i> 3</li>
+
+                                </ul>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="clear-fix"></div>
+
             </div>
 
 
