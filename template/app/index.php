@@ -97,8 +97,88 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
 
             </div>
 
-
         </section><!--end of intro-->
+        
+
+        <section class="container">
+
+            <main class="main">
+
+                <section class="main-crypto-mining-news">
+
+                    <h2 class="title">POPULAR POSTS</h2>
+
+                        <section class="main-news-w-50">
+
+                            <article>
+
+                                <img class="main-news-img" src="http://localhost/cms-php/1" alt="">
+                                <h3 class="article-title">
+                                    <a href="http://localhost/cms-php/show-article/1">Lorem ipsum dolor sit.</a>
+                                </h3>
+                                <ul class="info-bar">
+                                    <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b>Kaman,</b></a>
+                                        <span class="text-muted">feb 19 2021</span></li>
+                                    <li><i class="fas fa-bolt text-yellow"></i> 54</li>
+                                    <li><i class="fas fa-comments text-yellow"></i> 5</li>
+                                </ul>
+
+                            </article>
+
+                        </section>
+
+
+                    <section class="clear-fix"></section>
+
+                </section><!--end of main crypto mining news-->
+
+            </main><!--end of main-->
+
+
+            <aside class="sidebar">
+
+                <section class="sidebar-item">
+
+                    <ul class="sidebar-list">
+                        <li><a href="http://localhost/cms-php/show-category/1"><b>Lorem ipsum dolor.</b></a></li>
+                    </ul>
+
+                </section>
+
+                <section class="sidebar-item">
+
+                    <h2 class="title">POPULAR POSTS</h2>
+
+                    <section class="popular-post">
+
+                        <img class="popular-post-img" src="http://localhost/cms-php/4" alt="">
+
+                        <section class="popular-post-title">
+
+                            <h3>
+                                <a href="http://localhost/cms-php/show-article/5"><b>Lorem ipsum dolor.</b></a>
+                            </h3>
+
+                            <ul class="info-bar">
+                                <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b>Kam,</b></a>
+                                    <span class="text-muted">feb 4 2021</span></li>
+                            </ul>
+
+                        </section>
+
+                        <section class="clear-fix"></section>
+
+                    </section>
+
+                </section>
+
+
+            </aside><!--end of sidebar-->
+
+            <section class="clear-fix"></section>
+
+        </section><!--end of container-->
+        
 
     </section><!--end of content-->
     </section><!--end of first app section-->
