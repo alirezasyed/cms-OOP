@@ -10,12 +10,16 @@
     color: #333;
 }
 
-.intro-h-600px{
+.clear-fix {
+    clear: both;
+}
+
+.intro-h-600px {
     height: 600px;
     /*height < 768 auto*/
 }
 
-.intro-row{
+.intro-row {
     width: 100%;
 }
 
@@ -27,31 +31,22 @@
     margin-bottom: 10px;
 }
 
-.content .intro-2-3-col a > {
+.content .intro-2-3-col > a {
 
-    background: url(http://localhost/cms-php) no-repeat center; background-size: cover;
+    background: url(http://localhost/cms-php) no-repeat center; 
+    background-size: cover;
 }
 
-.intro-h-100{
+.intro-h-100 {
     height: auto;
 }
 
-.position-relative{
-    position: relative;
-}
-
-.h-md-300px{
+.h-md-300px {
     height: 300px;
     margin-bottom: 10px;
 }
 
-
-/* .intro-2-3-item{
-
-} */
-
-
-.intro-item-caption{
+.intro-item-caption {
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.4);
@@ -69,8 +64,7 @@
     right: 20px;
 }
 
-
-.caption-info-bar{
+.caption-info-bar {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -80,8 +74,94 @@
     display: inline-block;
 }
 
-/* ===================== Fin de styles primaires ===================== */
+.position-relative {
+    position: relative;
+}
 
+.position-absolute {
+    position: absolute;
+}
+
+.title {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.title:after {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+}
+
+.title:before {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 5px;
+    background: #F9B500;
+    z-index: 1;
+}
+
+.article-title {
+    padding-top: 20px;
+}
+
+.article-title a {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info-bar {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: inline-block;
+    padding-left: 0px;
+}
+
+.info-bar li {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 24px;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.text-yellow {
+    color: #F9B500!important;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #F9B500;
+    transition: all .2s;
+}
+
+a:hover > b {
+    text-decoration: none;
+    color: #F9B500;
+    transition: all .2s;
+}
+
+b {
+    font-weight: 700;
+}
 
 
 /* ===================== Header ===================== */
@@ -92,11 +172,6 @@
     font-weight: 600;
     /*height: 80px;*/
 }    
-
-/*.header:after{*/
-    /*content: '';*/
-    /*clear: both;*/
-/*}*/    
 
 .header-logo {
 
@@ -158,11 +233,6 @@
     font-weight: 700;
     color: #333;
 }    
-
-/* .header-menu-item-link:hover {
-
-
-} */    
 
 .header-menu-burger {
 
