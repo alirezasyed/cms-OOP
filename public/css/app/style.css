@@ -285,6 +285,68 @@ b {
     z-index: 10;
 }
 
+.caption-title {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    right: 20px;
+}
+
+.caption-title b {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.caption-title span {
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.caption-info-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 0px;
+    list-style: none;
+    display: inline-block;
+}
+
+.caption-info-bar li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #FFFFFF;
+}
+
+
+
+.img-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.mr-10x {
+  margin-right: 10px;
+}
+
+.mt-10x {
+    margin-top: 10px;
+}
+
+.ml-10x {
+    margin-left: 10px;
+}
+
+.mb-10x {
+    margin-bottom: 10px;
+}
+
 /* ===================== Fin de la section intro ===================== */
 
 
