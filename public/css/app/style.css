@@ -389,6 +389,51 @@ b {
 
 } */
 
-/* ===================== fin de la section main ===================== */
 
+.sidebar {
+    float: right;
+    width: calc(calc(100%/3) - 25px);
+    margin-left: 25px;
+}
+
+.sidebar-item {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0px;
+}
+
+.sidebar-list > li {
+    padding: 15px 0px;
+    border-bottom: 1px #ffffff solid;
+    text-align: center;
+    background-color: #F9B500;
+}
+
+.popular-post {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.popular-post-img {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.popular-post-title {
+    margin-left: 20px;
+    float: right;
+    width: calc(100% - 120px);
+    font-size: 16px;
+}
+
+.popular-post-title h3 a b {
+    font-size: 18px;
+}
+
+/* ===================== fin de la section main ===================== */
 
