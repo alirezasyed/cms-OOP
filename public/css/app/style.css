@@ -14,21 +14,6 @@
     clear: both;
 }
 
-.mb-10x{
-    margin-bottom: 10px;
-}
-
-.content .intro-2-3-col > a {
-
-    background: url(http://localhost/cms-php) no-repeat center; 
-    background-size: cover;
-}
-
-.h-md-300px {
-    height: 300px;
-    margin-bottom: 10px;
-}
-
 .position-relative {
     position: relative;
 }
@@ -213,6 +198,11 @@ b {
 
 
 /* ===================== section intro ===================== */
+.content .intro-2-3-col > a {
+
+    background: url(http://localhost/cms-php) no-repeat center; 
+    background-size: cover;
+}
 
 .intro-row {
     width: 100%;
@@ -347,6 +337,10 @@ b {
     margin-bottom: 10px;
 }
 
+.mb-10x{
+    margin-bottom: 10px;
+}
+
 /* ===================== Fin de la section intro ===================== */
 
 
@@ -436,4 +430,151 @@ b {
 }
 
 /* ===================== fin de la section main ===================== */
+
+
+
+
+/* ===================== footer ===================== */
+
+.footer
+{
+    background-color: #191919;
+    color: #cccccc;
+}
+
+.footer-row
+{
+    width: 100%;
+    background-color: rgba(25,25,25,.9);
+}
+
+.bg-map
+{
+    /*background: lightblue url("../images/map.png") no-repeat fixed center;*/
+    background-image: url("../images/map.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: local;
+    /*background: url(../images/map.png) no-repeat center center;*/
+}
+
+.footer-col{
+    float: left;
+    width: calc(calc(100%/3) - 30px);
+    margin-right: 30px;
+}
+
+.footer-logo
+{
+    float: left;
+    height: 24px;
+    margin: 28px 0;
+}
+
+.footer-p
+{
+    color: #cccccc;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: normal!important;
+}
+
+.footer-p a
+{
+    color: #cccccc;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: normal!important;
+    transition: all .2s;
+}
+
+.footer-p a:hover
+{
+    color: #F9B500;
+    transition: all .2s;
+}
+
+.footer-p-margin-20{
+    padding: 20px 0px;
+}
+
+
+.footer-section-title{
+    color: #F9B500;
+    padding: 30px 0px;
+    font-size: 18px;
+}
+.footer-section-link-item{
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.footer-line{
+    background-color: rgba(170, 170, 170, .2);
+    height: 1px;
+    margin-bottom: 20px;
+}
+.footer-section-link-item a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .2s;
+}
+.footer-section-link-item a:hover{
+    color: #F9B500;
+    transition: all .2s;
+}
+
+.footer-section-link-item p{
+    color: #cccccc;
+    padding: 15px 0px 0px 0px;
+    font-size: 14px;
+}
+
+
+
+.footer-menu{
+    list-style: none;
+    padding: 0px;
+    float: left;
+    width: 50%;
+}
+.footer-menu li{
+    padding: 0px 20px 20px 0px;
+    display: inline-block;
+}
+.footer-menu li a{
+    color: #cccccc;
+    font-size: 12px;
+    transition: all .2s;
+    font-weight: normal;
+}
+.footer-menu li a:hover{
+    color: #F9B500;
+    transition: all .2s;
+}
+
+
+.footer-social-network{
+    list-style: none;
+    padding: 0px;
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+.footer-social-network li{
+    padding: 0px 0px 20px 20px;
+    display: inline-block;
+}
+.footer-social-network li a i{
+    color: #cccccc;
+    font-size: 12px;
+    transition: all .2s;
+    font-weight: normal;
+}
+.footer-social-network li a i:hover{
+    color: #F9B500;
+    transition: all .2s;
+}
+
+/* ===================== end of footer ===================== */
 
