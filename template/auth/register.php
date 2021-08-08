@@ -35,7 +35,7 @@
 
                         <label for="username">user name</label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name ...">
-                        <!--            <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small>-->
+                                   <!-- <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
 
                     </div>
 
@@ -43,7 +43,7 @@
 
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter email ...">
-                        <!--            <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small>-->
+                                   <!-- <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
 
                     </div>
 
@@ -51,7 +51,7 @@
 
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter password ...">
-                        <!--            <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small>-->
+                                   <!-- <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
                         
                     </div>
 

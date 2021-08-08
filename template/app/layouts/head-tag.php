@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Page d'accueil</title>
+    <title><?php echo $setting['title'] ?></title>
 
 
     <link href="http://localhost/cms-php/public/css/app/style.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 
         <nav class="header">
 
-            <img class="header-logo" src="" alt="">
+            <img class="header-logo" src="http://localhost/admin-panel/<?php echo $setting['logo'] ?>" alt="">
             
             <button class="header-menu-burger" onclick="showMenu()" type="button"><i class="fas fa-bars"></i></button>
 
@@ -36,7 +36,7 @@
                 </li>
             </ul>
 
-            <section class="clear-fix"></section>
+            <!-- <section class="clear-fix"></section> -->
 
         </nav><!--fin de la barre de navigation--> 
 

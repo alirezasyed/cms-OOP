@@ -29,7 +29,7 @@ class Category extends Admin
         require_once (realpath(dirname(__FILE__). "/../template/admin/categories/create.php"));
     }
  
-    public function store($request, $id)
+    public function store($request)
     {
         $db = new DataBase();
         $db->insert('categories',array_keys($request) , $request);

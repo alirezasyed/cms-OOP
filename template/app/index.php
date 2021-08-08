@@ -100,54 +100,77 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
             <section class="intro-row intro-h-1-3">
 
                 <div class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/4">
-                        <div class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></div>
+
+                    <a href="http://localhost/cms-php/show-article/4">
+
+                        <div class="img-bg intro-h-100" style="background: url(http://localhost/cms-php) no-repeat center; background-size: cover;"></div>
+                        
                         <div class="intro-item-caption">
+
                             <h3 class="caption-title">
                                 <b>Lorem ipsum dolor sit amet.</b>
                             </h3>
+
                             <ul class="caption-info-bar">
                                 <li>feb 19 2019</li>
                                 <li><i class="fas fa-bolt text-yellow"></i> 43</li>
                                 <li><i class="fas fa-comments text-yellow"></i> 8</li>
                             </ul>
+
                         </div>
+
                     </a>
+
                 </div>
 
 
                 <div class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/1">
-                        <div class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></div>
+
+                    <a href="http://localhost/cms-php/show-article/1">
+
+                        <div class="img-bg intro-h-100" style="background: url(http://localhost/cms-php) no-repeat center; background-size: cover;"></div>
+
                         <div class="intro-item-caption">
+
                             <h3 class="caption-title">
                                 <b>Lorem ipsum dolor sit.</b>
                             </h3>
+
                             <ul class="caption-info-bar">
                                 <li>feb 19 2019</li>
                                 <li><i class="fas fa-bolt text-yellow"></i> 32</li>
                                 <li><i class="fas fa-comments text-yellow"></i> 12</li>
                             </ul>
+
                         </div>
+
                     </a>
+
                 </div>
 
 
 
                 <div class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
-                    <a href="http://localhost/admin-panel/show-article/5">
-                        <div class="img-bg intro-h-100" style="background: url(http://localhost/admin-panel) no-repeat center; background-size: cover;"></div>
+
+                    <a href="http://localhost/cms-php/show-article/5">
+
+                        <div class="img-bg intro-h-100" style="background: url(http://localhost/cms-php) no-repeat center; background-size: cover;"></div>
                         <div class="intro-item-caption">
+
                             <h3 class="caption-title">
                                 <b>Lorem ipsum dolor sit amet, consectetur.</b>
                             </h3>
+
                             <ul class="caption-info-bar">
                                 <li>feb 19 2019</li>
                                 <li><i class="fas fa-bolt text-yellow"></i> 94</li>
                                 <li><i class="fas fa-comments text-yellow"></i> 43</li>
                             </ul>
+
                         </div>
+
                     </a>
+
                 </div>
 
                 

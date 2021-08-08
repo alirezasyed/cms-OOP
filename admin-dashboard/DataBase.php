@@ -22,7 +22,7 @@ class DataBase
             $this->dbPassword,$this->option);
         }
         catch (PDOException $e){
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            echo "<div style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
         }
 
     }
@@ -50,7 +50,7 @@ class DataBase
         }
         catch (PDOException $e){
 
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            echo "<div style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
             
             return false;
         }
@@ -70,7 +70,7 @@ class DataBase
         }
         catch (PDOException $e){
 
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            echo "<div style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
             
             return false;
         }
@@ -112,7 +112,7 @@ class DataBase
 
         } catch (PDOException $e) {
 
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
+            echo "<div style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
 
             return false;
         }
@@ -141,7 +141,7 @@ class DataBase
         }
         catch (PDOException $e) {
 
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
+            echo "<div style='color:red;'> Il y a un problème de connexion :</div>" . $e->getMessage();
 
             return false;
         }
@@ -157,7 +157,7 @@ class DataBase
             return true;
         }
         catch (PDOException $e){
-            echo "<div> style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
+            echo "<div style='color:red;'> Il y a un problème de connexion :</div>". $e->getMessage();
             return false;
         }
 

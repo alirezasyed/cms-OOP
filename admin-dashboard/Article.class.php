@@ -46,7 +46,7 @@ class Article extends Admin{
 
             if ($request['image']){
 
-                $request = array_merge($request,array('user_id'=>1));
+                $request = array_merge($request,array('user_id'=>6));
                 $db->insert('articles',array_keys($request) , $request);
                 $this->redirect('article');
             }
@@ -80,7 +80,7 @@ class Article extends Admin{
             $request['image'] = $this->saveImage($request['image'], 'article-image');
             if ($request['image']){
 
-                $request = array_merge($request,array('user_id'=>1));
+                $request = array_merge($request,array('user_id'=>6));
                 $db->insert('articles',array_keys($request) , $request);
                 $this->redirect('article');
             }
@@ -90,7 +90,7 @@ class Article extends Admin{
                 unset($request['image']);
             }
 
-            $request= array_merge($request,array('user_id'=>1));
+            $request= array_merge($request,array('user_id'=>6));
             $db->update('articles',$id , array_keys($request),$request);
             $this->redirect('article');
         }
