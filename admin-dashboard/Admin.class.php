@@ -26,11 +26,11 @@ class Admin{
     protected function saveImage($image,$imagePath, $imagename=null){
 
         if ($imagename)
-            $imagename = $imagename . " . " . substr($image['type'], 6 , strlen($image['type']));
+            $imagename = $imagename . "." . substr($image['type'], 6 , strlen($image['type']));
 
         else
 
-            $imagename = date('Y-m-d-H-i-s') . " . " . substr($image['type'], 6 , strlen($image['type']));
+            $imagename = date('Y-m-d-H-i-s') . "." . substr($image['type'], 6 , strlen($image['type']));
 
         $imagetemp = $image['tmp_name'];
 
@@ -38,7 +38,7 @@ class Admin{
 
         if (is_uploaded_file($imagetemp)) {
 
-            if (move_uploaded_file($imagetemp, $imagePath . $imagename)){
+            if (move_uploaded_file($imagetemp,$imagePath.$imagename)){
                 return $imagePath . $imagename;
             }
             else{

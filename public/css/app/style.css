@@ -155,7 +155,7 @@ b{
     /*height: 80px;*/
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 
@@ -167,6 +167,8 @@ b{
 .header-menu{
     list-style: none;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .show{

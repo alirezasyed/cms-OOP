@@ -7,21 +7,20 @@ require_once ("Admin.class.php");
 
     public function index(){
         $db= new DataBase();
-        $setting= $db->select("SELECT * FROM `websetting`;")->fetch();
+        $setting = $db->select("SELECT * FROM `websetting`;")->fetch();
         require_once (realpath(dirname(__FILE__). "/../template/admin/web-setting/index.php"));
+        require_once (realpath(dirname(__FILE__). "/../template/app/web-setting/index.php"));
     }
-
     public function set()
     {
         $db= new DataBase();
-        $setting= $db->select("SELECT * FROM `websetting`;")->fetch();
+        $setting = $db->select("SELECT * FROM `websetting`;")->fetch();
         require_once (realpath(dirname(__FILE__). "/../template/admin/web-setting/set.php"));
     }
-    
     public function store($request)
     {
         $db= new DataBase();
-        $setting= $db->select("SELECT * FROM `websetting`;")->fetch();
+        $setting = $db->select("SELECT * FROM `websetting`;")->fetch();
         if($request['logo']['tmp_name'] != ""){
             $request['logo']= $this->saveImage($request['logo'],'setting','logo');
         }
