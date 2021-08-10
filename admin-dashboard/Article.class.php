@@ -46,7 +46,7 @@ class Article extends Admin{
 
             if ($request['image']){
 
-                $request = array_merge($request,array('user_id'=>6));
+                $request = array_merge($request,array('user_id'=>$_SESSION['user']));
                 $db->insert('articles',array_keys($request) , $request);
                 $this->redirect('article');
             }

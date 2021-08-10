@@ -1,34 +1,44 @@
 <aside class="sidebar">
 
     <div class="sidebar-item">
+
+        <?php foreach($categories as $category) {?>
+
         <ul class="sidebar-list">
-            <li><a href="http://localhost/cms-php/show-category/1"><b>Lorem ipsum dolor.</b></a></li>
+            <li><a href="http://localhost/cms-php/show-category/<?php echo $category['id']; ?>"><b><?php echo $category['name']; ?></b></a></li>
         </ul>
+        
+        <?php }?>
+
     </div>
 
-    <div class="sidebar-item">
+    <section class="sidebar-item">
 
         <h2 class="title">POPULAR POSTS</h2>
 
+        <?php foreach($sidebarPopularArticles as $article) { ?>
+
+
             <div class="popular-post">
 
-                <img class="popular-post-img" src="http://localhost/cms-php/4" alt="">
+                <img class="popular-post-img" src="http://localhost/cms-php/<?php echo $article['image']; ?>" alt="">
 
                 <div class="popular-post-title">
                     <h3>
-                        <a href="http://localhost/cms-php/show-article/5"><b>Lorem ipsum dolor.</b></a>
+                        <a href="http://localhost/cms-php/show-article/<?php echo $article['id']; ?>"><b><?php echo $article['title']; ?></b></a>
                     </h3>
                     <ul class="info-bar">
-                        <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b>Kam,</b></a>
-                            <span class="text-muted">feb 4 2021</span></li>
+
+                        <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?></b></a>
+
+                            <span class="text-muted"><?php echo date("M d, Y",strtotime($article['created_at'])) ; ?></span></li>
+
                     </ul>
                 </div>
 
-                <div class="clear-fix"></div>
-
             </div>
-
-    </div>
+        <?php }?>
+    </section>
 
 
 </aside>
