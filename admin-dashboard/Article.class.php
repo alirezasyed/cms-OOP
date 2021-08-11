@@ -74,24 +74,20 @@ class Article extends Admin{
     public function update($request,$id)
     {
         $db= new DataBase();
+        if ($request['cat_id'] != null) {
 
-        if ($request['cat_id'] != null){
+            if ($request['image']['tmp_name'] != null) {
 
-            $request['image'] = $this->saveImage($request['image'], 'article-image');
-            if ($request['image']){
-
-                $request = array_merge($request,array('user_id'=>6));
-                $db->insert('articles',array_keys($request) , $request);
-                $this->redirect('article');
-            }
-
-            else {
+                $article = $db->select("SELECT * FROM `articles` WHERE (`id` = ?); ", [$id])->fetch();
+                $this->removeImage($article['image']);
+                $request['image'] = $this->saveImage($request['image'], 'article-image');
+            } else {
 
                 unset($request['image']);
             }
 
-            $request= array_merge($request,array('user_id'=>6));
-            $db->update('articles',$id , array_keys($request),$request);
+            $request= array_merge($request, array('user_id'=>$_SESSION['user']));
+            $db->update('articles', $id, array_keys($request), $request);
             $this->redirect('article');
         }
 
