@@ -86,7 +86,12 @@ function uri($uri,$class,$method,$requestMethod='GET'){
 
 
 
+// $test = new CreateDB();
 
+// $result = $test->run();
+
+// echo var_dump($result);
+// exit;
 
 
 

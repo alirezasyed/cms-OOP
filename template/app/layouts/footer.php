@@ -8,10 +8,9 @@
         
             <div class="footer-col">
 
-                <img class="footer-logo" src="images/logo-white.png" alt="">
-                <section class="clear-fix"></section>
-                <p class="footer-p">Bit coin is an open-source, peer-to-peer, digital decentralized cryptocurrency.
-                    Powered by blockchain technology, its defining characteristic is</p>                    
+                <img class="footer-logo" src="http://localhost/cms-php/<?php echo $setting['logo'] ?>" alt="">
+                
+                <p class="footer-p"><?php echo $setting['description'] ?></p>                    
                 </p>
 
             </div>
@@ -20,14 +19,15 @@
 
                 <h3 class="footer-section-title">MOST POPULAR</h3>
                 <div class="footer-section-link-item">
-                    <a href="#">Its to Make or Break the Time for Bitcoin</a>
-                    <p>Jan 25, 2025</p>
+                    <a href="#"><?php echo $article['title']; ?></a>
+                    <p><?php echo $article['created_at']; ?></p>
                 </div>
 
                 <div class="footer-line"></div>
+                
                 <div class="footer-section-link-item">
-                    <a href="#">Its to Make or Break the Time for Bitcoin</a>
-                    <p>Jan 25, 2025</p>
+                    <a href="#"><?php echo $article['title']; ?></a>
+                    <p><?php echo $article['created_at']; ?></p>
                 </div>
 
             </div>
@@ -36,19 +36,17 @@
 
                 <h3 class="footer-section-title">MOST POPULAR</h3>
                 <div class="footer-section-link-item">
-                    <a href="#">Its to Make or Break the Time for Bitcoin</a>
-                    <p>Jan 25, 2025</p>
+                    <a href="#"><?php echo $article['title']; ?></a>
+                    <p><?php echo $article['created_at']; ?></p>
                 </div>
 
                 <div class="footer-line"></div>
                 <div class="footer-section-link-item">
-                    <a href="#">Its to Make or Break the Time for Bitcoin</a>
-                    <p>Jan 25, 2025</p>
+                    <a href="#"><?php echo $article['title']; ?></a>
+                    <p><?php echo $article['created_at']; ?></p>
                 </div>
                 
             </div>
-
-            <div class="clear-fix"></div>
 
         </div>
 
@@ -73,14 +71,10 @@
                 <li><a href=""><i class="fab fa-bitcoin"></i></a></li>
 
             </ul>
-
-            <div class="clear-fix"></div>
             
         </div>
 
     </section><!--fin de la deuxième section de l'application -->
-
-    <div class="clear-fix"></div>
 
 </footer><!--fin de pied de page -->
 
