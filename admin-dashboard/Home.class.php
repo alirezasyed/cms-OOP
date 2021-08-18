@@ -39,7 +39,7 @@ class Home {
 
         $db->update('articles', $id, ['view'], [$article['view']+1]);
 
-        
+
 
         $popularArticles = $db->select("SELECT articles.*, (SELECT COUNT(*) FROM comments WHERE comments.article_id = articles.id) AS comments_count, (SELECT username FROM users WHERE users.id = articles.user_id) AS username FROM articles  ORDER BY `view` DESC LIMIT 0,4 ;")->fetchAll();
 
@@ -58,6 +58,8 @@ class Home {
     }
 
     public function category($id){
+
+        
         
     }
 

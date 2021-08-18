@@ -105,7 +105,7 @@ class DataBase
 
             if (isset($affectedrows)) {
 
-                echo "Les enregistrements sont mis à jour";
+                // echo "Les enregistrements sont mis à jour";
             }
 
             return true;
