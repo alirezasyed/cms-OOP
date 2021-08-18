@@ -79,6 +79,19 @@ class Home {
     public function commentStore($request)
     {
 
+        session_start();
+        if(isset($_SESSION['user'])){
+            if($_SESSION['user'] != null){
+                $db= new DataBase();
+                $db->insert('comments', ['user_id', 'article_id', 'comment'], [$_SESSION['user'], $request['article_id'], $request['comment']]);
+                $this->redirectBack();
+            }
+            else
+            $this->redirectBack();
+        }
+        else
+        $this->redirectBack();
+
     }
 
     protected function redirectBack(){
