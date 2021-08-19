@@ -51,6 +51,8 @@ class Menu extends Admin
     {
         $db = new DataBase();
         $db->update('menus', $id, array_keys($request), $request);
+        // var_dump('hi');
+        // exit;
         $this->redirect('menu');
     }
 

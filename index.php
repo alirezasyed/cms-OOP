@@ -1,15 +1,19 @@
 <?php
 require_once ("admin-dashboard/Category.class.php");
+require_once ("admin-dashboard/Dashboard.class.php");
 require_once ("admin-dashboard/Article.class.php");
 require_once ("admin-dashboard/WebSetting.class.php");
 require_once ("admin-dashboard/User.class.php");
+require_once ("admin-dashboard/Comment.class.php");
 require_once ("admin-dashboard/Auth.class.php");
 require_once ("admin-dashboard/CreateDB.php");
 require_once ("admin-dashboard/Menu.class.php");
 require_once ("admin-dashboard/Home.class.php");
 
 use AdminDashboard\Category;
+use AdminDashboard\Dashboard;
 use AdminDashboard\User;
+use AdminDashboard\Comment;
 use AdminDashboard\Auth;
 use AdminDashboard\WebSetting;
 use AdminDashboard\Article;
@@ -24,7 +28,7 @@ function uri($uri,$class,$method,$requestMethod='GET'){
     $subURIs=explode('/',$uri);
     $request_uri=array_slice(explode('/',$_SERVER['REQUEST_URI']),2);
     if ($request_uri[0] == "" or $request_uri[0] == "/")
-        $request_uri[0] == "home";
+        $request_uri[0] = "home";
   
     $braek=false;
     if (sizeof($request_uri)== sizeof($subURIs) and $_SERVER['REQUEST_METHOD'] == $requestMethod){
@@ -99,8 +103,8 @@ function uri($uri,$class,$method,$requestMethod='GET'){
 
 
 
-
-
+// ================= dashboard ==================
+uri('admin','Dashboard','index');
 
 
 // ================= category ==================
@@ -143,6 +147,13 @@ uri('user/permission/{id}','User','permission');
 uri('user/edit/{id}','User','edit');
 uri('user/update/{id}','User','update','POST');
 uri('user/delete/{id}','User','delete');
+
+
+// ================= comments ==================
+uri('comment','Comment','index');
+uri('comment/show/{id}','Comment','show');
+uri('comment/approved/{id}','Comment','approved');
+
 
 
 
