@@ -23,6 +23,10 @@ require_once(realpath(dirname(__FILE__) . "/../layouts/head-tag.php"));
     </section>
 </section>
 
+
+
+
+
 <?php
 require_once(realpath(dirname(__FILE__) . "/../layouts/footer.php"));
 ?>

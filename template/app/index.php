@@ -6,11 +6,11 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
 
         <section class="intro intro-h-600px">
 
-            <div class="intro-row intro-h-2-3 mb-10x">
+            <div class="intro-row intro-h-2-3 mb-10x top-row">
 
             <?php if (isset($articles[0])) {?>
 
-                <div class="intro-2-3-col intro-h-100 position-relative h-md-300px">
+                <div class="intro-2-3-col intro-h-100 position-relative h-md-300px showcase">
 
                     <a href="http://localhost/cms-php/show-article/<?php echo $articles[0]['id']; ?>">
 
@@ -39,11 +39,12 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
                 <?php }?>
 
 
-                <div class="intro-1-3-col intro-h-100">
+                <!-- <div class="intro-1-3-col intro-h-100"> -->
 
                 <?php if (isset($articles[1])) {?>
 
-                    <div class="intro-1-3-item intro-h-50 position-relative h-md-300px">
+                    <div class="intro-1-3-item
+                     position-relative h-md-300px top-box top-box-a">
 
                         <a href="http://localhost/cms-php/show-article/<?php echo $articles[1]['id']; ?>">
 
@@ -74,7 +75,7 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
 
 
                     <?php if (isset($articles[2])) {?>
-                    <div class="intro-1-3-item intro-h-50 position-relative h-md-300px">
+                    <div class="intro-1-3-item intro-h-50 position-relative h-md-300px top-box top-box-b">
 
                         <a href="http://localhost/cms-php/show-article/<?php echo $articles[2]['id']; ?>">
 
@@ -103,14 +104,14 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
 
                     <?php }?>
 
-                </div>
+                <!-- </div> -->
 
             </div>
 
 
             <?php if (isset($articles[3])) {?>
 
-            <section class="intro-row intro-h-1-3">
+            <section class="intro-row intro-h-1-3 boxes">
 
                 <div class="intro-1-3-col-item intro-h-100 position-relative h-md-300px">
 
