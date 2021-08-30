@@ -1,3 +1,5 @@
+<div class="section-aside">
+
 <aside class="sidebar">
 
     <div class="sidebar-item">
@@ -42,3 +44,5 @@
 
 
 </aside>
+
+</div>

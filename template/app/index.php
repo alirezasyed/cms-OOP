@@ -204,7 +204,7 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
         </section><!--end of intro-->
 
 
-        <div class="container">
+        <div class="container no-gutter">
 
             <main class="main">
 
@@ -213,35 +213,39 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
 
                     <h2 class="title">POPULAR POSTS</h2>
 
+                    <div class="popular">
                     <?php foreach ($popularArticles as $article) {?>
 
-                           <div class="col-lg-6">
+
+                             <div class="box">
                                
-                           <div class="main-news-w-50">
+                               <div class="main-news-w-50">
+    
+                                    <article>
+    
+                                        <img class="main-news-img" src="http://localhost/cms-php/<?php echo $article['image']; ?>" alt="">
+    
+                                        <h3 class="article-title">
+                                            <a href="http://localhost/cms-php/show-article/<?php echo $article['id']; ?>"><?php echo $article['title']; ?></a>
+                                        </h3>
+    
+                                        <ul class="info-bar">
+    
+                                            <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?>,</b></a>
+                                                <span class="text-muted"><?php echo date("M d, Y", strtotime($article['created_at'])); ?></span></li>
+                                            <li><i class="fas fa-bolt text-yellow"></i> <?php echo $article['view']; ?></li>
+                                            <li><i class="fas fa-comments text-yellow"></i> <?php echo $article['comments_count']; ?></li>
+    
+                                        </ul>
+    
+                                    </article>
+    
+                                    </div>
+                               </div>
 
-                                <article>
-
-                                    <img class="main-news-img" src="http://localhost/cms-php/<?php echo $article['image']; ?>" alt="">
-
-                                    <h3 class="article-title">
-                                        <a href="http://localhost/cms-php/show-article/<?php echo $article['id']; ?>"><?php echo $article['title']; ?></a>
-                                    </h3>
-
-                                    <ul class="info-bar">
-
-                                        <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?>,</b></a>
-                                            <span class="text-muted"><?php echo date("M d, Y", strtotime($article['created_at'])); ?></span></li>
-                                        <li><i class="fas fa-bolt text-yellow"></i> <?php echo $article['view']; ?></li>
-                                        <li><i class="fas fa-comments text-yellow"></i> <?php echo $article['comments_count']; ?></li>
-
-                                    </ul>
-
-                                </article>
-
-                                </div>
-                           </div>
-
-                           <?php }?>
+                               
+                               <?php }?>
+                            </div>
 
                         </div>
                 </div><!--end of main crypto mining news-->
@@ -252,7 +256,7 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
 require_once realpath(dirname(__FILE__) . "/../app/layouts/sidebar.php");
 ?>
 
-        </div><!--end of container-->
+        </div> <!--end of container-->
 
 
     </section><!--end of content-->
