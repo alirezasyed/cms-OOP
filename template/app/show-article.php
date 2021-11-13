@@ -9,15 +9,15 @@ require_once(realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php"));
             <main class="main">
                 <section class="main-news">
                     <h2 class="title"><?php echo $article['title']; ?></h2>
-                    <article>
+                    <article class="show-title">
 
                         <img class="main-news-img" src="http://localhost/cms-php/<?php echo $article['image']; ?>" alt="">
                         <h3 class="article-title">
                             <a href="http://localhost/cms-php/show-article/1"><?php echo $article['title']; ?></a>
                         </h3>
                         <ul class="info-bar">
-                            <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $username['username']; ?>,</b></a>
-                                <span class="text-muted"><?php echo date("M d, Y",strtotime($article['created_at']));?></span></li>
+                            <li class=""><span class="">by</span> <a href="#" class="color-black"><b><?php echo $username['username']; ?>,</b></a>
+                                <span class=""><?php echo date("M d, Y",strtotime($article['created_at']));?></span></li>
                             <li><i class="fas fa-bolt text-yellow"></i> <?php echo $article['view']; ?></li>
                             <li><i class="fas fa-comments text-yellow"></i> <?php echo $commentCount['COUNT(*)']; ?></li>
                         </ul>

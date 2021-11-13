@@ -31,9 +31,9 @@
                     </h3>
                     <ul class="info-bar">
 
-                        <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?></b></a>
+                        <li class=""><span class="">unknown</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?></b></a>
 
-                            <span class="text-muted"><?php echo date("M d, Y",strtotime($article['created_at'])) ; ?></span></li>
+                            <span class=""><?php echo date("M d, Y",strtotime($article['created_at'])) ; ?></span></li>
 
                     </ul>
                 </div>

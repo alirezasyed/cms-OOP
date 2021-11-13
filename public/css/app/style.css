@@ -12,10 +12,20 @@
 }
 
 body {
-    background-image: url("http://localhost/cms-php/public/article-image/back.jpg");
+    background-image: url("http://localhost/cms-php/public/article-image/bacs.jpg");
     background-repeat: repeat;
     background-attachment: scroll;
-  }
+}
+
+b {
+    color: #fff;
+}
+
+.show-title p {
+    background-color: rgba(255, 255, 255, 0.822);
+}
+
+
 
 .position-relative{
     position: relative;
@@ -31,6 +41,7 @@ body {
     margin-bottom: 40px;
     font-size: 18px;
     font-weight: 700;
+    color: #fff;
 }
 
 .title:after {
@@ -47,21 +58,69 @@ body {
     content:'';
     position: absolute;
     bottom: 0;
-    left: 9px;
+    left: -2px;
     width: 80px;
     height: 5px;
     background: #F9B500;
     z-index: 1;
 }
 
+.titles{
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.titles:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 9px;
+    width: calc(97% + 4px);
+    height: 1px;
+    background: #ccc;
+}
+
+.titles:before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 80px;
+    height: 5px;
+    background: #F9B500;
+    z-index: 1;
+}
+
+span {
+    color: #fff;
+}
+
 .article-title{
     padding-top: 20px;
 }
 
-.article-title a{
+.article-title a {
     font-size: 20px;
     font-weight: 700;
+    text-decoration: none;
+    color: #fff;
 }
+
+.article-title a:hover {
+    color: #F9B500;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: #F9B500;
+  }
+  
+  ::selection {
+    background: #F9B500;
+  }
 
 .info-bar{
     list-style: none;
@@ -75,8 +134,12 @@ body {
     display: inline-block;
     margin-right: 20px;
     line-height: 24px;
+    color: #fff;
 }
 
+.infor-bar span {
+    color: #fff;
+}
 .text-muted{
     color: #888;
 }
@@ -159,8 +222,13 @@ b{
 
 
 .header-logo{
-    height: 24px;
+    max-height: 47px;
     margin: 28px 0;
+}
+
+.header-logo:hover {
+    transition: 0.5;
+    font-size: 15px;
 }
 
 .header-menu{
@@ -208,9 +276,17 @@ b{
     line-height: 80px;
     padding: 0px 15px;
     font-weight: 700;
-    color: #333;
+    color: #fff;
+    text-decoration: none;
 }
 
+
+.header-menu-item-link:hover {
+    padding: 15px;
+    background-color: #F9B500;
+    border-radius: 5px;
+    color: #fff;
+}
 
 
 .header-menu-burger{
@@ -544,6 +620,15 @@ b{
     background-color: #F9B500;
 }
 
+.sidebar-list li a {
+    text-decoration: none;
+}
+
+.sidebar-list li a b:hover {
+    color: #fff !important;
+
+}    
+
 .popular-post{
     width: 100%;
     margin-bottom: 20px;
@@ -560,6 +645,20 @@ b{
     width: calc(100% - 120px);
     font-size: 16px;
 }
+
+.popular-post-title a b {
+    color: #fff;
+}
+
+.popular-post-title a {
+    text-decoration: none;
+}
+
+.popular-post-title a b:hover {
+    color: #F9B500;
+}
+
+#F9B500
 
 
 
@@ -593,7 +692,7 @@ b{
 }
 
 .footer-logo{
-    height: 24px;
+    max-height: 50px;
     margin: 28px 0;
 }
 
@@ -724,7 +823,7 @@ b{
 
 .comment{
     display: block;
-    width: calc(100% - 20px);
+    width: 100%;
     margin: 8px 0px;
     padding: 10px;
     border-radius: 3px;

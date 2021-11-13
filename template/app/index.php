@@ -24,7 +24,7 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
 
                             <ul class="caption-info-bar">
 
-                                <li class="">by <b class="text-yellow"><?php echo $articles[0]['username']; ?></b> <?php echo date("M d, Y", strtotime($articles[0]['created_at'])); ?></li>
+                                <li class="">Author <b class="text-yellow"><?php echo $articles[0]['username']; ?></b> <?php echo date("M d, Y", strtotime($articles[0]['created_at'])); ?></li>
                                 <li><i class="fas fa-bolt text-yellow"></i>  <?php echo $articles[0]['view']; ?></li>
                                 <li><i class="fas fa-comments text-yellow"></i> <?php echo $articles[0]['comments_count']; ?></li>
 
@@ -211,7 +211,7 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
                 <div class="main-crypto-mining-news">
                     <div class="row">
 
-                    <h2 class="title">POPULAR POSTS</h2>
+                    <h2 class="titles">POPULAR POSTS</h2>
 
                     <div class="popular">
                     <?php foreach ($popularArticles as $article) {?>
@@ -231,8 +231,8 @@ require_once realpath(dirname(__FILE__) . "/../app/layouts/head-tag.php");
     
                                         <ul class="info-bar">
     
-                                            <li class=""><span class="text-muted">by</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?>,</b></a>
-                                                <span class="text-muted"><?php echo date("M d, Y", strtotime($article['created_at'])); ?></span></li>
+                                            <li class=""><span class="">Author</span> <a href="#" class="color-black"><b><?php echo $article['username']; ?>,</b></a>
+                                                <span class=""><?php echo date("M d, Y", strtotime($article['created_at'])); ?></span></li>
                                             <li><i class="fas fa-bolt text-yellow"></i> <?php echo $article['view']; ?></li>
                                             <li><i class="fas fa-comments text-yellow"></i> <?php echo $article['comments_count']; ?></li>
     
